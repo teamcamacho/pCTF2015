@@ -34,25 +34,27 @@ def main(arg):
 
 
 def decomp():
-	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_first_byte.bin", "rb") as fi:
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_second_byte.bin", "rb") as fi:
 		z = zlib.decompressobj()
-		data = binascii.hexlify(fi.read())
-		idat = binascii.unhexlify(data)
-		# print "%s"%data
-		cpr = zlib.decompress(idat)
-		# get =""
-		# while True:
-		# 	buf = z.unconsumed_tail
-		# 	if buf == "":
-		# 		buf = fi.read(8192)
-		# 		print "buf len is %x"%len(buf)
-		# 		if buf == "":
-		# 			break
-		# 	got = z.decompress(buf)
-		# 	if got == "":
-		# 		break
-		# 	get = get+binascii.hexlify(got)
-		# # print get
+		# data = binascii.hexlify(fi.read())
+		# idat = binascii.unhexlify(data)
+		# # print "%s"%data
+		# cpr = zlib.decompress(idat)
+		get =""
+		fi.read(4)
+		while True:
+			buf = z.unconsumed_tail
+			if buf == "":
+				buf = fi.read(8192)
+				print "buf len is 0x%x"%len(buf)
+				if buf == "":
+					break
+			got = z.decompress(buf)
+			if got == "":
+				break
+			get = get+binascii.hexlify(got)
+		if len(get) > 4:
+			print "you got got"
 def killitwithfire():
 	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/corrupt_crc_3.png","rb") as fi:
 		data = fi.read()
@@ -80,4 +82,4 @@ def killitwithfire():
 	pass
 if __name__ == "__main__":
     decomp()
-    # main("c1")
+    main("74")
