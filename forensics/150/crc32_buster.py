@@ -21,9 +21,9 @@ def main(arg):
 			item2 = ctypes.c_ulong(zlib.crc32(d))
 			# print "0x%s"%binascii.hexlify(d)
 			final_crc = "%x" % item.value
-			if arg in final_crc:
-				print "%s" % binascii.hexlify(d[len(d) - 4:len(d)])
-				print "final crc is 0x%x" % (item.value)
+			# if arg in final_crc:
+			print "%s" % binascii.hexlify(d[len(d) - 4:len(d)])
+			print "final crc is 0x%x" % (item.value)
 				# print "final crc without tag is 0x%x"%(item2.value)
 			# print "%s"%binascii.hexlify(d[0x1fffc:0x20000])
 		# b.append(data)
@@ -34,7 +34,7 @@ def main(arg):
 
 
 def decomp():
-	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_second_byte.bin", "rb") as fi:
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_third_byte.bin", "rb") as fi:
 		z = zlib.decompressobj()
 		# data = binascii.hexlify(fi.read())
 		# idat = binascii.unhexlify(data)
@@ -81,5 +81,5 @@ def killitwithfire():
 		print "data length is 0x%x"%(len(data)-4)
 	pass
 if __name__ == "__main__":
-    decomp()
-    main("74")
+    # decomp()
+    main("adefb326")
