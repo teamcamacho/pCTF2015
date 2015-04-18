@@ -1,0 +1,735 @@
+What order?
+2
+Input numbers.
+1231
+3131
+3213
+3213
+1313
+1313
+123131
+Got input! Verifying...
+
+Breakpoint 1, 0x0000000000401008 in ?? ()
+(gdb) dumper
+0x00000000004007cb in ?? ()
+$745 = 6303760
+$746 = 0
+$747 = -1
+$748 = 2
+$749 = 6303760
+$750 = 2
+$751 = (void *) 0x7fffffffdea0
+$752 = (void *) 0x7fffffffde28
+=> 0x4007cb:	push   rbp
+0x00000000004007cc in ?? ()
+$753 = 6303760
+$754 = 0
+$755 = -1
+$756 = 2
+$757 = 6303760
+$758 = 2
+$759 = (void *) 0x7fffffffdea0
+$760 = (void *) 0x7fffffffde20
+=> 0x4007cc:	mov    rbp,rsp
+0x00000000004007cf in ?? ()
+$761 = 6303760
+$762 = 0
+$763 = -1
+$764 = 2
+$765 = 6303760
+$766 = 2
+$767 = (void *) 0x7fffffffde20
+$768 = (void *) 0x7fffffffde20
+=> 0x4007cf:	push   rbx
+0x00000000004007d0 in ?? ()
+$769 = 6303760
+$770 = 0
+$771 = -1
+$772 = 2
+$773 = 6303760
+$774 = 2
+$775 = (void *) 0x7fffffffde20
+---Type <return> to continue, or q <return> to quit---
+$776 = (void *) 0x7fffffffde18
+=> 0x4007d0:	sub    rsp,0x88
+0x00000000004007d7 in ?? ()
+$777 = 6303760
+$778 = 0
+$779 = -1
+$780 = 2
+$781 = 6303760
+$782 = 2
+$783 = (void *) 0x7fffffffde20
+$784 = (void *) 0x7fffffffdd90
+=> 0x4007d7:	mov    QWORD PTR [rbp-0x88],rdi
+0x00000000004007de in ?? ()
+$785 = 6303760
+$786 = 0
+$787 = -1
+$788 = 2
+$789 = 6303760
+$790 = 2
+$791 = (void *) 0x7fffffffde20
+$792 = (void *) 0x7fffffffdd90
+=> 0x4007de:	mov    DWORD PTR [rbp-0x8c],esi
+0x00000000004007e4 in ?? ()
+$793 = 6303760
+$794 = 0
+$795 = -1
+$796 = 2
+$797 = 6303760
+$798 = 2
+$799 = (void *) 0x7fffffffde20
+$800 = (void *) 0x7fffffffdd90
+=> 0x4007e4:	mov    eax,DWORD PTR [rbp-0x8c]
+0x00000000004007ea in ?? ()
+$801 = 2
+$802 = 0
+$803 = -1
+$804 = 2
+$805 = 6303760
+---Type <return> to continue, or q <return> to quit---
+$806 = 2
+$807 = (void *) 0x7fffffffde20
+$808 = (void *) 0x7fffffffdd90
+=> 0x4007ea:	mov    edx,eax
+0x00000000004007ec in ?? ()
+$809 = 2
+$810 = 0
+$811 = -1
+$812 = 2
+$813 = 6303760
+$814 = 2
+$815 = (void *) 0x7fffffffde20
+$816 = (void *) 0x7fffffffdd90
+=> 0x4007ec:	imul   edx,DWORD PTR [rbp-0x8c]
+0x00000000004007f3 in ?? ()
+$817 = 2
+$818 = 0
+$819 = -1
+$820 = 4
+$821 = 6303760
+$822 = 2
+$823 = (void *) 0x7fffffffde20
+$824 = (void *) 0x7fffffffdd90
+=> 0x4007f3:	mov    eax,edx
+0x00000000004007f5 in ?? ()
+$825 = 4
+$826 = 0
+$827 = -1
+$828 = 4
+$829 = 6303760
+$830 = 2
+$831 = (void *) 0x7fffffffde20
+$832 = (void *) 0x7fffffffdd90
+=> 0x4007f5:	add    eax,eax
+0x00000000004007f7 in ?? ()
+$833 = 8
+$834 = 0
+$835 = -1
+---Type <return> to continue, or q <return> to quit---
+$836 = 4
+$837 = 6303760
+$838 = 2
+$839 = (void *) 0x7fffffffde20
+$840 = (void *) 0x7fffffffdd90
+=> 0x4007f7:	lea    ecx,[rax+rdx*1]
+0x00000000004007fa in ?? ()
+$841 = 8
+$842 = 0
+$843 = 12
+$844 = 4
+$845 = 6303760
+$846 = 2
+$847 = (void *) 0x7fffffffde20
+$848 = (void *) 0x7fffffffdd90
+=> 0x4007fa:	mov    edx,DWORD PTR [rbp-0x8c]
+0x0000000000400800 in ?? ()
+$849 = 8
+$850 = 0
+$851 = 12
+$852 = 2
+$853 = 6303760
+$854 = 2
+$855 = (void *) 0x7fffffffde20
+$856 = (void *) 0x7fffffffdd90
+=> 0x400800:	mov    eax,edx
+0x0000000000400802 in ?? ()
+$857 = 2
+$858 = 0
+$859 = 12
+$860 = 2
+$861 = 6303760
+$862 = 2
+
+$863 = (void *) 0x7fffffffde20
+$864 = (void *) 0x7fffffffdd90
+=> 0x400802:	add    eax,eax
+0x0000000000400804 in ?? ()
+$865 = 4
+---Type <return> to continue, or q <return> to quit---
+$866 = 0
+$867 = 12
+$868 = 2
+$869 = 6303760
+$870 = 2
+$871 = (void *) 0x7fffffffde20
+$872 = (void *) 0x7fffffffdd90
+=> 0x400804:	add    eax,edx
+0x0000000000400806 in ?? ()
+$873 = 6
+$874 = 0
+$875 = 12
+$876 = 2
+$877 = 6303760
+$878 = 2
+$879 = (void *) 0x7fffffffde20
+$880 = (void *) 0x7fffffffdd90
+=> 0x400806:	neg    eax
+0x0000000000400808 in ?? ()
+$881 = 4294967290
+$882 = 0
+$883 = 12
+$884 = 2
+$885 = 6303760
+$886 = 2
+
+$887 = (void *) 0x7fffffffde20
+$888 = (void *) 0x7fffffffdd90
+=> 0x400808:	add    eax,ecx
+0x000000000040080a in ?? ()
+$889 = 6
+$890 = 0
+$891 = 12
+$892 = 2
+$893 = 6303760
+$894 = 2
+$895 = (void *) 0x7fffffffde20
+
+$896 = (void *) 0x7fffffffdd90
+=> 0x40080a:	add    eax,0x1
+---Type <return> to continue, or q <return> to quit---
+0x000000000040080d in ?? ()
+$897 = 7
+$898 = 0
+$899 = 12
+$900 = 2
+$901 = 6303760
+$902 = 2
+$903 = (void *) 0x7fffffffde20
+$904 = (void *) 0x7fffffffdd90
+=> 0x40080d:	cdqe   
+0x000000000040080f in ?? ()
+$905 = 7
+$906 = 0
+$907 = 12
+$908 = 2
+$909 = 6303760
+$910 = 2
+$911 = (void *) 0x7fffffffde20
+$912 = (void *) 0x7fffffffdd90
+=> 0x40080f:	mov    esi,0x4
+0x0000000000400814 in ?? ()
+$913 = 7
+$914 = 0
+$915 = 12
+$916 = 2
+$917 = 6303760
+$918 = 4
+$919 = (void *) 0x7fffffffde20
+$920 = (void *) 0x7fffffffdd90
+=> 0x400814:	mov    rdi,rax
+0x0000000000400817 in ?? ()
+$921 = 7
+$922 = 0
+$923 = 12
+$924 = 2
+$925 = 7
+$926 = 4
+$927 = (void *) 0x7fffffffde20
+---Type <return> to continue, or q <return> to quit---
+$928 = (void *) 0x7fffffffdd90
+=> 0x400817:	call   0x400530 <calloc@plt>
+0x000000000040081c in ?? ()
+$929 = 6303888
+$930 = 0
+$931 = 5
+$932 = 40
+$933 = 0
+$934 = 0
+$935 = (void *) 0x7fffffffde20
+$936 = (void *) 0x7fffffffdd90
+=> 0x40081c:	mov    QWORD PTR [rbp-0x78],rax
+0x0000000000400820 in ?? ()
+$937 = 6303888
+$938 = 0
+$939 = 5
+$940 = 40
+$941 = 0
+$942 = 0
+$943 = (void *) 0x7fffffffde20
+$944 = (void *) 0x7fffffffdd90
+=> 0x400820:	mov    DWORD PTR [rbp-0x70],0x0
+0x0000000000400827 in ?? ()
+$945 = 6303888
+$946 = 0
+$947 = 5
+$948 = 40
+$949 = 0
+$950 = 0
+$951 = (void *) 0x7fffffffde20
+$952 = (void *) 0x7fffffffdd90
+=> 0x400827:	jmp    0x4008df
+0x00000000004008df in ?? ()
+$953 = 6303888
+$954 = 0
+$955 = 5
+$956 = 40
+$957 = 0
+---Type <return> to continue, or q <return> to quit---
+$958 = 0
+$959 = (void *) 0x7fffffffde20
+$960 = (void *) 0x7fffffffdd90
+=> 0x4008df:	mov    eax,DWORD PTR [rbp-0x8c]
+0x00000000004008e5 in ?? ()
+$961 = 2
+$962 = 0
+$963 = 5
+$964 = 40
+$965 = 0
+$966 = 0
+$967 = (void *) 0x7fffffffde20
+$968 = (void *) 0x7fffffffdd90
+=> 0x4008e5:	add    eax,eax
+0x00000000004008e7 in ?? ()
+$969 = 4
+$970 = 0
+$971 = 5
+$972 = 40
+$973 = 0
+$974 = 0
+$975 = (void *) 0x7fffffffde20
+$976 = (void *) 0x7fffffffdd90
+=> 0x4008e7:	sub    eax,0x1
+0x00000000004008ea in ?? ()
+$977 = 3
+$978 = 0
+$979 = 5
+$980 = 40
+$981 = 0
+$982 = 0
+$983 = (void *) 0x7fffffffde20
+$984 = (void *) 0x7fffffffdd90
+=> 0x4008ea:	cmp    eax,DWORD PTR [rbp-0x70]
+0x00000000004008ed in ?? ()
+$985 = 3
+$986 = 0
+$987 = 5
+---Type <return> to continue, or q <return> to quit---
+$988 = 40
+$989 = 0
+$990 = 0
+$991 = (void *) 0x7fffffffde20
+$992 = (void *) 0x7fffffffdd90
+=> 0x4008ed:	jg     0x40082c
+0x000000000040082c in ?? ()
+$993 = 3
+$994 = 0
+$995 = 5
+$996 = 40
+$997 = 0
+$998 = 0
+$999 = (void *) 0x7fffffffde20
+$1000 = (void *) 0x7fffffffdd90
+=> 0x40082c:	mov    DWORD PTR [rbp-0x6c],0x0
+0x0000000000400833 in ?? ()
+$1001 = 3
+$1002 = 0
+$1003 = 5
+$1004 = 40
+$1005 = 0
+$1006 = 0
+$1007 = (void *) 0x7fffffffde20
+$1008 = (void *) 0x7fffffffdd90
+=> 0x400833:	jmp    0x4008c7
+0x00000000004008c7 in ?? ()
+$1009 = 3
+$1010 = 0
+$1011 = 5
+$1012 = 40
+$1013 = 0
+$1014 = 0
+$1015 = (void *) 0x7fffffffde20
+$1016 = (void *) 0x7fffffffdd90
+=> 0x4008c7:	mov    eax,DWORD PTR [rbp-0x70]
+0x00000000004008ca in ?? ()
+$1017 = 0
+---Type <return> to continue, or q <return> to quit---
+$1018 = 0
+$1019 = 5
+$1020 = 40
+$1021 = 0
+$1022 = 0
+$1023 = (void *) 0x7fffffffde20
+$1024 = (void *) 0x7fffffffdd90
+=> 0x4008ca:	mov    edx,DWORD PTR [rbp-0x8c]
+0x00000000004008d0 in ?? ()
+$1025 = 0
+$1026 = 0
+$1027 = 5
+$1028 = 2
+$1029 = 0
+$1030 = 0
+$1031 = (void *) 0x7fffffffde20
+$1032 = (void *) 0x7fffffffdd90
+=> 0x4008d0:	add    eax,edx
+0x00000000004008d2 in ?? ()
+$1033 = 2
+$1034 = 0
+$1035 = 5
+$1036 = 2
+$1037 = 0
+$1038 = 0
+$1039 = (void *) 0x7fffffffde20
+$1040 = (void *) 0x7fffffffdd90
+=> 0x4008d2:	cmp    eax,DWORD PTR [rbp-0x6c]
+0x00000000004008d5 in ?? ()
+$1041 = 2
+$1042 = 0
+$1043 = 5
+$1044 = 2
+$1045 = 0
+$1046 = 0
+$1047 = (void *) 0x7fffffffde20
+$1048 = (void *) 0x7fffffffdd90
+=> 0x4008d5:	jg     0x400838
+---Type <return> to continue, or q <return> to quit---
+0x0000000000400838 in ?? ()
+$1049 = 2
+$1050 = 0
+$1051 = 5
+$1052 = 2
+$1053 = 0
+$1054 = 0
+$1055 = (void *) 0x7fffffffde20
+$1056 = (void *) 0x7fffffffdd90
+=> 0x400838:	mov    eax,DWORD PTR [rbp-0x70]
+0x000000000040083b in ?? ()
+$1057 = 0
+$1058 = 0
+$1059 = 5
+$1060 = 2
+$1061 = 0
+$1062 = 0
+$1063 = (void *) 0x7fffffffde20
+$1064 = (void *) 0x7fffffffdd90
+=> 0x40083b:	cdqe   
+0x000000000040083d in ?? ()
+$1065 = 0
+$1066 = 0
+$1067 = 5
+$1068 = 2
+$1069 = 0
+$1070 = 0
+$1071 = (void *) 0x7fffffffde20
+$1072 = (void *) 0x7fffffffdd90
+=> 0x40083d:	shl    rax,0x3
+0x0000000000400841 in ?? ()
+$1073 = 0
+$1074 = 0
+$1075 = 5
+$1076 = 2
+$1077 = 0
+$1078 = 0
+$1079 = (void *) 0x7fffffffde20
+---Type <return> to continue, or q <return> to quit---
+$1080 = (void *) 0x7fffffffdd90
+=> 0x400841:	add    rax,QWORD PTR [rbp-0x88]
+0x0000000000400848 in ?? ()
+$1081 = 6303760
+$1082 = 0
+$1083 = 5
+$1084 = 2
+$1085 = 0
+$1086 = 0
+$1087 = (void *) 0x7fffffffde20
+$1088 = (void *) 0x7fffffffdd90
+=> 0x400848:	mov    rax,QWORD PTR [rax]
+0x000000000040084b in ?? ()
+$1089 = 6303792
+$1090 = 0
+$1091 = 5
+$1092 = 2
+$1093 = 0
+$1094 = 0
+$1095 = (void *) 0x7fffffffde20
+$1096 = (void *) 0x7fffffffdd90
+=> 0x40084b:	mov    edx,DWORD PTR [rbp-0x6c]
+0x000000000040084e in ?? ()
+$1097 = 6303792
+$1098 = 0
+$1099 = 5
+$1100 = 0
+$1101 = 0
+$1102 = 0
+$1103 = (void *) 0x7fffffffde20
+$1104 = (void *) 0x7fffffffdd90
+=> 0x40084e:	movsxd rdx,edx
+0x0000000000400851 in ?? ()
+$1105 = 6303792
+$1106 = 0
+$1107 = 5
+$1108 = 0
+$1109 = 0
+---Type <return> to continue, or q <return> to quit---
+$1110 = 0
+$1111 = (void *) 0x7fffffffde20
+$1112 = (void *) 0x7fffffffdd90
+=> 0x400851:	shl    rdx,0x2
+0x0000000000400855 in ?? ()
+$1113 = 6303792
+$1114 = 0
+$1115 = 5
+$1116 = 0
+$1117 = 0
+$1118 = 0
+$1119 = (void *) 0x7fffffffde20
+$1120 = (void *) 0x7fffffffdd90
+=> 0x400855:	add    rax,rdx
+0x0000000000400858 in ?? ()
+$1121 = 6303792
+$1122 = 0
+$1123 = 5
+$1124 = 0
+$1125 = 0
+$1126 = 0
+$1127 = (void *) 0x7fffffffde20
+$1128 = (void *) 0x7fffffffdd90
+=> 0x400858:	mov    eax,DWORD PTR [rax]
+0x000000000040085a in ?? ()
+$1129 = 1231
+$1130 = 0
+$1131 = 5
+$1132 = 0
+$1133 = 0
+$1134 = 0
+$1135 = (void *) 0x7fffffffde20
+$1136 = (void *) 0x7fffffffdd90
+=> 0x40085a:	mov    DWORD PTR [rbp-0x1c],eax
+0x000000000040085d in ?? ()
+$1137 = 1231
+$1138 = 0
+$1139 = 5
+---Type <return> to continue, or q <return> to quit---
+$1140 = 0
+$1141 = 0
+$1142 = 0
+$1143 = (void *) 0x7fffffffde20
+$1144 = (void *) 0x7fffffffdd90
+=> 0x40085d:	mov    eax,DWORD PTR [rbp-0x8c]
+0x0000000000400863 in ?? ()
+$1145 = 2
+$1146 = 0
+$1147 = 5
+$1148 = 0
+$1149 = 0
+$1150 = 0
+$1151 = (void *) 0x7fffffffde20
+$1152 = (void *) 0x7fffffffdd90
+=> 0x400863:	mov    edx,eax
+0x0000000000400865 in ?? ()
+$1153 = 2
+$1154 = 0
+$1155 = 5
+$1156 = 2
+$1157 = 0
+$1158 = 0
+$1159 = (void *) 0x7fffffffde20
+$1160 = (void *) 0x7fffffffdd90
+=> 0x400865:	imul   edx,DWORD PTR [rbp-0x8c]
+0x000000000040086c in ?? ()
+$1161 = 2
+$1162 = 0
+$1163 = 5
+$1164 = 4
+$1165 = 0
+$1166 = 0
+$1167 = (void *) 0x7fffffffde20
+$1168 = (void *) 0x7fffffffdd90
+=> 0x40086c:	mov    eax,edx
+0x000000000040086e in ?? ()
+$1169 = 4
+---Type <return> to continue, or q <return> to quit---
+$1170 = 0
+$1171 = 5
+$1172 = 4
+$1173 = 0
+$1174 = 0
+$1175 = (void *) 0x7fffffffde20
+$1176 = (void *) 0x7fffffffdd90
+=> 0x40086e:	add    eax,eax
+0x0000000000400870 in ?? ()
+$1177 = 8
+$1178 = 0
+$1179 = 5
+$1180 = 4
+$1181 = 0
+$1182 = 0
+$1183 = (void *) 0x7fffffffde20
+$1184 = (void *) 0x7fffffffdd90
+=> 0x400870:	lea    ecx,[rax+rdx*1]
+0x0000000000400873 in ?? ()
+$1185 = 8
+$1186 = 0
+$1187 = 12
+$1188 = 4
+$1189 = 0
+$1190 = 0
+$1191 = (void *) 0x7fffffffde20
+$1192 = (void *) 0x7fffffffdd90
+=> 0x400873:	mov    edx,DWORD PTR [rbp-0x8c]
+0x0000000000400879 in ?? ()
+$1193 = 8
+$1194 = 0
+$1195 = 12
+$1196 = 2
+$1197 = 0
+$1198 = 0
+$1199 = (void *) 0x7fffffffde20
+$1200 = (void *) 0x7fffffffdd90
+=> 0x400879:	mov    eax,edx
+---Type <return> to continue, or q <return> to quit---
+0x000000000040087b in ?? ()
+$1201 = 2
+$1202 = 0
+$1203 = 12
+$1204 = 2
+$1205 = 0
+$1206 = 0
+$1207 = (void *) 0x7fffffffde20
+$1208 = (void *) 0x7fffffffdd90
+=> 0x40087b:	add    eax,eax
+0x000000000040087d in ?? ()
+$1209 = 4
+$1210 = 0
+$1211 = 12
+$1212 = 2
+$1213 = 0
+$1214 = 0
+$1215 = (void *) 0x7fffffffde20
+$1216 = (void *) 0x7fffffffdd90
+=> 0x40087d:	add    eax,edx
+0x000000000040087f in ?? ()
+$1217 = 6
+$1218 = 0
+$1219 = 12
+$1220 = 2
+$1221 = 0
+$1222 = 0
+$1223 = (void *) 0x7fffffffde20
+$1224 = (void *) 0x7fffffffdd90
+=> 0x40087f:	neg    eax
+0x0000000000400881 in ?? ()
+$1225 = 4294967290
+$1226 = 0
+$1227 = 12
+$1228 = 2
+$1229 = 0
+$1230 = 0
+$1231 = (void *) 0x7fffffffde20
+---Type <return> to continue, or q <return> to quit---
+$1232 = (void *) 0x7fffffffdd90
+=> 0x400881:	add    eax,ecx
+0x0000000000400883 in ?? ()
+$1233 = 6
+$1234 = 0
+$1235 = 12
+$1236 = 2
+$1237 = 0
+$1238 = 0
+$1239 = (void *) 0x7fffffffde20
+$1240 = (void *) 0x7fffffffdd90
+=> 0x400883:	add    eax,0x1
+0x0000000000400886 in ?? ()
+$1241 = 7
+$1242 = 0
+$1243 = 12
+$1244 = 2
+$1245 = 0
+$1246 = 0
+$1247 = (void *) 0x7fffffffde20
+$1248 = (void *) 0x7fffffffdd90
+=> 0x400886:	cmp    eax,DWORD PTR [rbp-0x1c]
+0x0000000000400889 in ?? ()
+$1249 = 7
+$1250 = 0
+$1251 = 12
+$1252 = 2
+$1253 = 0
+$1254 = 0
+$1255 = (void *) 0x7fffffffde20
+$1256 = (void *) 0x7fffffffdd90
+=> 0x400889:	jge    0x400895
+0x000000000040088b in ?? ()
+$1257 = 7
+$1258 = 0
+$1259 = 12
+$1260 = 2
+$1261 = 0
+---Type <return> to continue, or q <return> to quit---
+$1262 = 0
+$1263 = (void *) 0x7fffffffde20
+$1264 = (void *) 0x7fffffffdd90
+=> 0x40088b:	mov    eax,0x0
+0x0000000000400890 in ?? ()
+$1265 = 0
+$1266 = 0
+$1267 = 12
+$1268 = 2
+$1269 = 0
+$1270 = 0
+$1271 = (void *) 0x7fffffffde20
+$1272 = (void *) 0x7fffffffdd90
+=> 0x400890:	jmp    0x400cb1
+0x0000000000400cb1 in ?? ()
+$1273 = 0
+$1274 = 0
+$1275 = 12
+$1276 = 2
+$1277 = 0
+$1278 = 0
+$1279 = (void *) 0x7fffffffde20
+$1280 = (void *) 0x7fffffffdd90
+=> 0x400cb1:	add    rsp,0x88
+0x0000000000400cb8 in ?? ()
+$1281 = 0
+$1282 = 0
+$1283 = 12
+$1284 = 2
+$1285 = 0
+$1286 = 0
+$1287 = (void *) 0x7fffffffde20
+$1288 = (void *) 0x7fffffffde18
+=> 0x400cb8:	pop    rbx
+0x0000000000400cb9 in ?? ()
+$1289 = 0
+$1290 = 0
+$1291 = 12
+---Type <return> to continue, or q <return> to quit---
+$1292 = 2
+$1293 = 0
+$1294 = 0
+$1295 = (void *) 0x7fffffffde20
+$1296 = (void *) 0x7fffffffde20
+=> 0x400cb9:	pop    rbp
+0x0000000000400cba in ?? ()
+$1297 = 0
+$1298 = 0
+$1299 = 12
+$1300 = 2
+$1301 = 0
+$1302 = 0
+$1303 = (void *) 0x7fffffffdea0
+$1304 = (void *) 0x7fffffffde28
+=> 0x400cba:	ret    
