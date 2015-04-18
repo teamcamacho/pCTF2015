@@ -128,7 +128,6 @@ $832 = (void *) 0x7fffffffdd90
 $833 = 8
 $834 = 0
 $835 = -1
----Type <return> to continue, or q <return> to quit---
 $836 = 4
 $837 = 6303760
 $838 = 2
