@@ -34,8 +34,9 @@ def main(arg):
 
 
 def decomp():
-	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_third_byte.bin", "rb") as fi:
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_second_byte.bin", "rb") as fi:
 		z = zlib.decompressobj()
+
 		# data = binascii.hexlify(fi.read())
 		# idat = binascii.unhexlify(data)
 		# # print "%s"%data
@@ -54,6 +55,8 @@ def decomp():
 				break
 			get = get+binascii.hexlify(got)
 		if len(get) > 4:
+			cdata = zlib.compress(get)
+			ddata = zlib.decompress(cdata)
 			print "you got got"
 def killitwithfire():
 	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/corrupt_crc_3.png","rb") as fi:
@@ -81,5 +84,5 @@ def killitwithfire():
 		print "data length is 0x%x"%(len(data)-4)
 	pass
 if __name__ == "__main__":
-    # decomp()
-    main("adefb326")
+    decomp()
+    # main("adefb326")
