@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import ctypes
 import struct
 import binascii
 import png
@@ -27,7 +27,7 @@ def fixcrc(chunk_type, chunk_data, expectedcrc):
 
 headers = ["IHDR", "sBIT", "pHYs", "tEXt", "IDAT", "IEND"]
 
-with open("corrupt_735acee15fa4f3be8ecd0c6bcf294fd4.png", "rb") as f:
+with open("corrupt_crc_3.png", "rb") as f:
 #with open("testing.png", "rb") as f:
 #with open("out.png", "rb") as f:
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)
@@ -74,11 +74,12 @@ with open("corrupt_735acee15fa4f3be8ecd0c6bcf294fd4.png", "rb") as f:
 
             chunk_data = f.read(int(chunk_size,16))
             chunk_crc = struct.unpack('>i', f.read(4))[0]
-
-        print "Chunk crc: 0x%x" % chunk_crc
+        chunk_ucrc = ctypes.c_uint(chunk_crc)
+        print "Chunk crc: 0x%x" % chunk_ucrc.value
 
         calc_crc = crc32(chunk_type, chunk_data)
-        print "Calculated crc: ", hex(calc_crc)
+        u_crc = ctypes.c_uint(calc_crc)
+        print "Calculated crc: 0x%x" %(u_crc.value)
 
         """
             if chunk_crc != calc_crc:
