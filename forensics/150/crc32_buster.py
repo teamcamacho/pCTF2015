@@ -33,8 +33,24 @@ def main(arg):
 	pass
 
 
+def decomp_test():
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_compression_testdata.bin", "rb") as fi:
+		data = binascii.hexlify(fi.read())
+		print "data length is %d"%len(data)
+		print "data is %s"%data
+		
+		idat = binascii.unhexlify(data)
+		print "idat length is %d"%len(idat)
+		
+		cpr = zlib.decompress(idat)
+		print "cpr length is %d"%len(cpr)
+		
+		print "==testdata=="
+		print "%s"%binascii.hexlify(cpr)
+		print "==testdata=="
+
 def decomp():
-	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_crc_binary_second_byte.bin", "rb") as fi:
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_compression.bin", "rb") as fi:
 		z = zlib.decompressobj()
 
 		# data = binascii.hexlify(fi.read())
@@ -42,7 +58,33 @@ def decomp():
 		# # print "%s"%data
 		# cpr = zlib.decompress(idat)
 		get =""
-		fi.read(4)
+		# fi.read(4)
+		
+		""" 
+		Get the whole decompression blob
+		"""
+		# data = fi.read()
+		# b = bytearray(data)
+		# for i in range(0,4):
+		# 	print "len of b was: %d"%len(b)
+		# 	print "i was %d"%i
+		# 	b.append(0)
+		# 	print "len of b is: %d"%len(b)
+		
+		# 	for x in range(0,256):
+		# 	# b[len(b)-1] = x
+		# 	# print "last bit was %s"%binascii.hexlify(b[len(b)-4:len(b)])
+		# 		hex_b = binascii.hexlify(b)
+		# 		un_b = binascii.unhexlify(hex_b)
+		# 		try:
+		# 			zlib.decompress(un_b)
+		# 			print "yay"	
+		# 		except:
+		# 			continue
+		
+		""" 
+		Get the partial decompression blob
+		"""
 		while True:
 			buf = z.unconsumed_tail
 			if buf == "":
@@ -57,7 +99,7 @@ def decomp():
 		if len(get) > 4:
 			cdata = zlib.compress(get)
 			ddata = zlib.decompress(cdata)
-			print "you got got"
+			print "you got got with %d bytes"%len(get)
 def killitwithfire():
 	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/corrupt_crc_3.png","rb") as fi:
 		data = fi.read()
@@ -84,5 +126,6 @@ def killitwithfire():
 		print "data length is 0x%x"%(len(data)-4)
 	pass
 if __name__ == "__main__":
-    decomp()
+	decomp_test()
+	decomp()
     # main("adefb326")
