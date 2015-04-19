@@ -6,7 +6,7 @@ import sys
 import time
 import subprocess
 
-os.chdir("/home/problem/permute")
+# os.chdir("/home/problem/permute")
 
 buf = map(chr, range(256))
 
