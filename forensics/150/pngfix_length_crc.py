@@ -57,10 +57,10 @@ def main(infilename, outfilename):
                         newdata.append("A")
                         # shift data to the right
                         x = len(newdata) - 1
-                        while x > (f.tell() + len(newdata) - file_size + 1):
+                        while x > (f.tell() + i + len(newdata) - file_size + 1):
                             newdata[x] = newdata[x-1]
                             x -= 1
-                        newdata.insert(f.tell(), "A")
+                        newdata.insert(f.tell() + i, "A")
                 
                 """
                 if chunk_correct_size != int(chunk_size,16):
