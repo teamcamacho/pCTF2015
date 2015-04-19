@@ -4,7 +4,7 @@ import fcntl
 import os
 import sys
 import time
-import subprocess32 as subprocess
+import subprocess
 
 os.chdir("/home/problem/permute")
 
@@ -12,10 +12,12 @@ buf = map(chr, range(256))
 
 while 1:
     a,b = map(ord, sys.stdin.read(2))
+    print "a was: %s"%a
+    print "b was: %s"%b
     if a == b:
         break
     buf[a], buf[b] = buf[b], buf[a]
-
+    print buf
 from struct import pack
 
 fn = 'submit/%d' % os.getpid()
