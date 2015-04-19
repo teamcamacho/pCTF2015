@@ -57,7 +57,7 @@ def main(infilename, outfilename):
                         newdata.append("A")
                         # shift data to the right
                         x = len(newdata) - 1
-                        while x > f.tell() + 1:
+                        while x > (f.tell() + len(newdata) - file_size + 1):
                             newdata[x] = newdata[x-1]
                             x -= 1
                         newdata.insert(f.tell(), "A")
