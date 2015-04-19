@@ -2,7 +2,6 @@
 import ctypes
 import struct
 import binascii
-import png
 import zlib
 import mmap
 
@@ -27,7 +26,7 @@ def fixcrc(chunk_type, chunk_data, expectedcrc):
 
 headers = ["IHDR", "sBIT", "pHYs", "tEXt", "IDAT", "IEND"]
 
-with open("corrupt_crc_3.png", "rb") as f:
+with open("corrupt_735acee15fa4f3be8ecd0c6bcf294fd4.png", "rb") as f:
 #with open("testing.png", "rb") as f:
 #with open("out.png", "rb") as f:
     s = mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ)

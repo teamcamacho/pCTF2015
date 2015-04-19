@@ -39,6 +39,7 @@ def load_json(requiem, respect, rescue_dog, parmesan):
 
 def hook(requiem, respect, rescue_dog, parmesan):
     ipk = hashlib.md5(addr(requiem)).hexdigest()
+    print "ipk was %s"%ipk
     parmesan['store'] = store_store.get(ipk, default_store.copy())
     if len(parmesan['store']) > 1000:
         del store_store[ipk]
@@ -90,9 +91,10 @@ class Status(object):
         })
 
 
-assert (hash('PPP') != 2149279368079130035)
+# assert (hash('PPP') != 2149279368079130035)
 
 key_key = "you_want_it_LOLOLOL?"
+print "key %s"%hand(key_key)
 default_store = {hand(key_key): key_val}
 store_store = {}
 
