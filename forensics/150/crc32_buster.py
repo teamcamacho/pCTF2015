@@ -29,10 +29,20 @@ def main(arg):
 		# b.append(data)
 		# print "0x%s"%binascii.hexlify(b)
 
+
 		print "data length is 0x%x" % (len(data) - 4)
 	pass
-
-
+def add_test():
+	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_compression_testdata.bin", "rb") as fi:
+		data = binascii.hexlify(fi.read())
+		b = bytearray(data)
+		print "data length is %d"%len(b)
+		print "data is %s"%b
+		
+		b.append("1")
+		print "data length is %d"%len(b)
+		print "data is %s"%b
+		
 def decomp_test():
 	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/test_compression_testdata.bin", "rb") as fi:
 		data = binascii.hexlify(fi.read())
@@ -63,24 +73,24 @@ def decomp():
 		""" 
 		Get the whole decompression blob
 		"""
-		# data = fi.read()
-		# b = bytearray(data)
-		# for i in range(0,4):
-		# 	print "len of b was: %d"%len(b)
-		# 	print "i was %d"%i
-		# 	b.append(0)
-		# 	print "len of b is: %d"%len(b)
+		data = fi.read()
+		b = bytearray(data)
+		for i in range(0,4):
+			print "len of b was: %d"%len(b)
+			print "i was %d"%i
+			b.append(0)
+			print "len of b is: %d"%len(b)
 		
-		# 	for x in range(0,256):
-		# 	# b[len(b)-1] = x
-		# 	# print "last bit was %s"%binascii.hexlify(b[len(b)-4:len(b)])
-		# 		hex_b = binascii.hexlify(b)
-		# 		un_b = binascii.unhexlify(hex_b)
-		# 		try:
-		# 			zlib.decompress(un_b)
-		# 			print "yay"	
-		# 		except:
-		# 			continue
+			for x in range(0,256):
+			# b[len(b)-1] = x
+			# print "last bit was %s"%binascii.hexlify(b[len(b)-4:len(b)])
+				hex_b = binascii.hexlify(b)
+				un_b = binascii.unhexlify(hex_b)
+				try:
+					zlib.decompress(un_b)
+					print "yay"	
+				except:
+					continue
 		
 		""" 
 		Get the partial decompression blob
@@ -100,32 +110,9 @@ def decomp():
 			cdata = zlib.compress(get)
 			ddata = zlib.decompress(cdata)
 			print "you got got with %d bytes"%len(get)
-def killitwithfire():
-	with open("C:/Users/user/Documents/Visual Studio 2013/Projects/pCTF2015/forensics/150/corrupt_crc_3.png","rb") as fi:
-		data = fi.read()
-		b= bytearray(data)
-		for x in range(0,256):
-			# data[0] = 0x00
-			b[len(data)-1] = x
-			d = binascii.a2b_hex(binascii.hexlify(b[4:0x20004]))
-			# calculate tag crc
-			tag_crc = binascii.crc32(b[0:4])
-			
-			item = ctypes.c_ulong(zlib.crc32(d,tag_crc))
-			item2 = ctypes.c_ulong(zlib.crc32(d))
-			# print "0x%s"%binascii.hexlify(d)
-			final_crc = "%x"%item.value
-			if arg in final_crc:
-				print "%s"%binascii.hexlify(d[len(d)-4:len(d)])	
-				print "final crc is 0x%x"%(item.value)
-				# print "final crc without tag is 0x%x"%(item2.value)
-			# print "%s"%binascii.hexlify(d[0x1fffc:0x20000])
-		# b.append(data)
-		# print "0x%s"%binascii.hexlify(b)
-		
-		print "data length is 0x%x"%(len(data)-4)
-	pass
 if __name__ == "__main__":
-	decomp_test()
+	# pass
+	# add_test()
+	# decomp_test()
 	decomp()
-    # main("adefb326")
+	# main("adefb326")
