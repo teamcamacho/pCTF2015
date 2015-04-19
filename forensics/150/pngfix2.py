@@ -2,7 +2,6 @@
 import ctypes
 import struct
 import binascii
-import png
 import zlib
 import mmap
 
